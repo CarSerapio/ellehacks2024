@@ -55,7 +55,7 @@
     <img src="{% static 'images/wave1.png' %}" class="bottom-img">
 </section>
 
-profile information form -->
+<!--profile information form -->
     <section id="home">
         <div class="container">
             <div class="card">
@@ -65,15 +65,15 @@ profile information form -->
                         <form>
                             <div class="info">
                                 <label for="name" class="form-label">Full Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Please input name" readonly class="form-control">
+                                <input type="text" class="form-control" id="name" placeholder="John Smith" readonly class="form-control">
                             </div>
                             <div class="info">
                                 <label for="license" class="form-label">License Class</label>
-                                <input type="text" class="form-control" id="license" placeholder="Please input license class" readonly class="form-control">
+                                <input type="text" class="form-control" id="license" placeholder="G2" readonly class="form-control">
                              </div>
                              <div class="info">
                                 <label for="cert" class="form-label">Certification</label>
-                                <input type="text" class="form-control" id="cert" placeholder="Please list any current certifications" readonly class="form-control">
+                                <input type="text" class="form-control" id="cert" placeholder="First Aid" readonly class="form-control">
                              </div>
 
                         </form>
@@ -91,43 +91,39 @@ profile information form -->
         <div class= "container">
             <h2>Available Requests</h2>
             <div class="list-group">
-                <button type="button" class="list-group-item list-group-item-action"><h4>User1 on Date1</h4>
+                <button type="button" class="list-group-item list-group-item-action"><h4>{{records.0.full_name}} on February 15, 2024</h4>
                     <div class="description">
-                        User1 needs to go from start address to destination on Date1. 
+                        {{ records.0.full_name }} ({{ records.0.age }}) needs to go from 321 Elm Street to 456 Oak Avenue on February 15, 2024. 
                         Important things to note include:
                         <ul>
-                            <li>health condition1</li>
-                            <li>health condition2</li>
+                            <li>They have the following health conditions: {{ records.0.medical_conditions }}</li>
                         </ul>
                     </div>
                 </button>
-                <button type="button" class="list-group-item list-group-item-action"><h4>User2 on Date2</h4>
+                <button type="button" class="list-group-item list-group-item-action"><h4>{{ records.1.full_name }} on March 8, 2024</h4>
                     <div class="description">
-                        User1 needs to go from start address to destination on Date1. 
+                        {{ records.1.full_name }} ({{ records.1.age }}) needs to go from 123 Pine Street to 789 Maple Lane on March 8, 2024. 
                         Important things to note include:
                         <ul>
-                            <li>health condition1</li>
-                            <li>health condition2</li>
+                            <li>They have the following health conditions: {{ records.1.medical_conditions }} </li>
                         </ul>
                     </div>
                 </button>
-                <button type="button" class="list-group-item list-group-item-action"><h4>User3 on Date3</h4>
+                <button type="button" class="list-group-item list-group-item-action"><h4>{{ records.2.full_name }} on April 20, 2024</h4>
                     <div class="description">
-                        User1 needs to go from start address to destination on Date1. 
+                        {{ records.2.full_name }} ({{ records.2.age }}) needs to go from 567 Cedar Road to 890 Birch Boulevard on April 20, 2024. 
                         Important things to note include:
                         <ul>
-                            <li>health condition1</li>
-                            <li>health condition2</li>
+                            <li>They have the following health conditions: {{ records.2.medical_conditions }} </li>
                         </ul>
                     </div>
                 </button>
-                <button type="button" class="list-group-item list-group-item-action"><h4>User4 on Date4</h4>
+                <button type="button" class="list-group-item list-group-item-action"><h4>{{ records.3.full_name }} on May 12, 2024</h4>
                     <div class="description">
-                        User1 needs to go from start address to destination on Date1. 
+                        {{ records.3.full_name }} ({{ records.3.age }}) needs to go from 901 Spruce Avenue to 234 Walnut Drive on May 12, 2024. 
                         Important things to note include:
                         <ul>
-                            <li>health condition1</li>
-                            <li>health condition2</li>
+                            <li>They have the following health conditions: {{ records.2.medical_conditions }} </li>
                         </ul>
                     </div>
                 </button>
@@ -138,7 +134,9 @@ profile information form -->
     <!-- booked transport form -->
 
     <section id="booked">
-        <div class="container">
+        {% csrf_token %}
+
+        <div class="container" onclick="location.href='{% url 'map' %}'"">
             <h2>Booked</h2>
             <div class="container">
                 <div class="row row-striped">
@@ -147,18 +145,14 @@ profile information form -->
                         <h2>OCT 23</h2>
                     </div>
                     <div class="col-10">
-                        <h3 class="text-uppercase"><strong>Ice Cream Social</strong></h3>
+                        <h3 class="text-uppercase"><strong>Pioneer Village Walk</strong></h3>
                         <ul class="list-inline">
-                            <li class="list-inline-item"><i class="fa fa-calendar-o" aria-hidden="true"></i> Monday</li>
+                            <li class="list-inline-item"><i class="fa fa-calendar-o" aria-hidden="true"></i>York University to Pioneer Village</li>
                             <li class="list-inline-item"><i class="fa fa-clock-o" aria-hidden="true"></i> 12:30 PM - 2:00 PM</li>
-                            <li class="list-inline-item"><i class="fa fa-location-arrow" aria-hidden="true"></i> Cafe</li>
+                            <li class="list-inline-item"><i class="fa fa-location-arrow" aria-hidden="true"></i> Park</li>
                         </ul>
-                        <p>Lorem ipsum dolsit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>{{ records.3.full_name}} wants to take a walk at Pioneer Village.</p>
                     </div>
-                    <div id= "map" class="container">
-                        <h2> Map goes here</h2>
-                    </div>
-
                 </div>
         </div>
     </section>

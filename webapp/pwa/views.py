@@ -9,14 +9,23 @@ import requests
 import os 
 from dotenv import load_dotenv
 import polyline 
-from datetime import datetime
+from datetime import datetime, timedelta 
 
+# Imports needed for `volunteer`
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi 
+import random 
 
 load_dotenv() 
 
 passkey = os.environ.get("GMAPS_KEY")
 gmaps = googlemaps.Client(key=passkey)
 mapbox_key = os.environ.get("MAPBOX_KEY")
+
+password = os.environ.get("MONGODB_PASSWORD")
+uri = f"mongodb+srv://CarolineSerapio:{password}@cluster0.lep8bak.mongodb.net/?retryWrites=true&w=majority"
+client = MongoClient(uri, server_api=ServerApi('1'))
+
 
 # Create your views here.
 def login(request): 
@@ -26,10 +35,36 @@ def index(request):
     return render(request, "index.html")
 
 def volunteer(request): 
-    return render(request, "volunteer-page.html")
+    db = client["user"]
+    collection1 = db["senior"]
+
+    # Pick seniors from database 
+    pipeline = [ 
+        {"$sample": {"size": 4}}
+    ]
+
+    records = list(collection1.aggregate(pipeline)) 
+
+    def rand_date(): 
+        today = datetime.today() 
+        random_days = random.randint(0,365)
+        random_date = (today + timedelta(days=random_days)).date() 
+
+        return random_date 
+
+    return render(request, "volunteer-page.html", { 'records': records })
 
 def senior(request): 
-    return render(request, "senior-page.html")
+    db = client["user"]
+    collection = db["volunteer"]
+
+    pipeline = [ 
+        {"$sample": {"size": 4}}
+    ]
+
+    record = list(collection.aggregate(pipeline))[0] 
+
+    return render(request, "senior-page.html", { 'record' : record })
 
 def map(request): 
     # return HttpResponse("Hello, world. This is a test.")

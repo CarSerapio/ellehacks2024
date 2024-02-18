@@ -19,7 +19,6 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
       <!--  <button class="navbar-brand" type="button" href="#">Snow Angels Transport</button> -->
-        <button type="button" class="btn btn-primary" onclick="redirectToLogin('volunteer')">Snow Angels Transport</button>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -190,6 +189,9 @@
                     <option >Yukon</option>
                 </select>
             </form>
+
+            <button type="button" class="btn btn-secondary btn-lg">Submit</button>
+
             </div>
             
             
@@ -200,7 +202,7 @@
         </div>
 </section>
 
-</section id="pickups">
+<section id="pickups">
 <div class="container">
     <h2>Booked</h2>
     <div class="container">
@@ -210,7 +212,7 @@
                 <h2>OCT 23</h2>
             </div>
             <div class="col-10">
-                <h3 class="text-uppercase"><strong>Volunteer Name</strong></h3>
+                <h3 class="text-uppercase"><strong>{{ record.full_name }} </strong></h3>
                 <ul class="list-inline">
                     <li class="list-inline-item"><i class="fa fa-calendar-o" aria-hidden="true"></i> Monday</li>
                     <li class="list-inline-item"><i class="fa fa-clock-o" aria-hidden="true"></i> 12:30 PM - 2:00 PM</li>
