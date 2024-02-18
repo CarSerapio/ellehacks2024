@@ -17,7 +17,7 @@
     <section id="navbar">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-            <a class="navbar-brand" href="#">Snow Angels Transport</a>
+            <a class="navbar-brand" href="#">Snow Angels</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -55,7 +55,7 @@
     <img src="{% static 'images/wave1.png' %}" class="bottom-img">
 </section>
 
-<!-- profile information form -->
+profile information form -->
     <section id="home">
         <div class="container">
             <div class="card">
@@ -65,15 +65,15 @@
                         <form>
                             <div class="info">
                                 <label for="name" class="form-label">Full Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Please input name">
+                                <input type="text" class="form-control" id="name" placeholder="Please input name" readonly class="form-control">
                             </div>
                             <div class="info">
                                 <label for="license" class="form-label">License Class</label>
-                                <input type="text" class="form-control" id="license" placeholder="Please input license class">
+                                <input type="text" class="form-control" id="license" placeholder="Please input license class" readonly class="form-control">
                              </div>
                              <div class="info">
                                 <label for="cert" class="form-label">Certification</label>
-                                <input type="text" class="form-control" id="cert" placeholder="Please list any current certifications">
+                                <input type="text" class="form-control" id="cert" placeholder="Please list any current certifications" readonly class="form-control">
                              </div>
 
                         </form>
@@ -101,9 +101,36 @@
                         </ul>
                     </div>
                 </button>
-                <button type="button" class="list-group-item list-group-item-action"><h4>User2 on Date2</h4></button>
-                <button type="button" class="list-group-item list-group-item-action"><h4>User3 on Date3</h4></button>
-                <button type="button" class="list-group-item list-group-item-action"><h4>User4 on Date4</h4></button>
+                <button type="button" class="list-group-item list-group-item-action"><h4>User2 on Date2</h4>
+                    <div class="description">
+                        User1 needs to go from start address to destination on Date1. 
+                        Important things to note include:
+                        <ul>
+                            <li>health condition1</li>
+                            <li>health condition2</li>
+                        </ul>
+                    </div>
+                </button>
+                <button type="button" class="list-group-item list-group-item-action"><h4>User3 on Date3</h4>
+                    <div class="description">
+                        User1 needs to go from start address to destination on Date1. 
+                        Important things to note include:
+                        <ul>
+                            <li>health condition1</li>
+                            <li>health condition2</li>
+                        </ul>
+                    </div>
+                </button>
+                <button type="button" class="list-group-item list-group-item-action"><h4>User4 on Date4</h4>
+                    <div class="description">
+                        User1 needs to go from start address to destination on Date1. 
+                        Important things to note include:
+                        <ul>
+                            <li>health condition1</li>
+                            <li>health condition2</li>
+                        </ul>
+                    </div>
+                </button>
             </div>
         </div>
     </section>

@@ -53,19 +53,11 @@ body
     margin: 50px 
 }
 
-.row-striped:nth-of-type(odd){
-    background-color: #efefef;
+.row-striped {
+    padding: 15px 0;
+    background-color:rgba(185, 185, 254, 0.566);
     border-left: 4px #000000 solid;
-  }
-  
-  .row-striped:nth-of-type(even){
-    background-color: #ffffff;
-    border-left: 4px #efefef solid;
-  }
-  
-  .row-striped {
-      padding: 15px 0;
-  }
+}
 
   #map{
     background-color: gray;
