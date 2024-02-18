@@ -6,6 +6,7 @@
 
 .login-container{
     align-self: center;
+    width: 50%;
 }
 
 .text-center{
@@ -23,3 +24,4 @@
     width: 400px;
     height:250px;
 }
+

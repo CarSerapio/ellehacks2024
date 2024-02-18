@@ -32,3 +32,8 @@
     padding: 25px 
 }
 
+.row-striped {
+    padding: 15px 0;
+    background-color:rgba(185, 185, 254, 0.566);
+    border-left: 4px #000000 solid;
+}
