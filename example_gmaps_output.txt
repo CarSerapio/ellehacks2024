@@ -1,0 +1,264 @@
+[
+    {
+        "bounds": {
+            "northeast": {
+                "lat": 43.7765442,
+                "lng": -79.50129129999999
+            },
+            "southwest": {
+                "lat": 43.7736132,
+                "lng": -79.5082935
+            }
+        },
+        "copyrights": "Map data ©2024 Google",
+        "legs": [
+            {
+                "distance": {
+                    "text": "0.9 km",
+                    "value": 915
+                },
+                "duration": {
+                    "text": "12 mins",
+                    "value": 742
+                },
+                "end_address": "Pioneer Village, Toronto, ON M7A 2C5, Canada",
+                "end_location": {
+                    "lat": 43.7765442,
+                    "lng": -79.5082935
+                },
+                "start_address": "4700 Keele St, North York, ON M3J 1P3, Canada",
+                "start_location": {
+                    "lat": 43.7740056,
+                    "lng": -79.50136549999999
+                },
+                "steps": [
+                    {
+                        "distance": {
+                            "text": "19 m",
+                            "value": 19
+                        },
+                        "duration": {
+                            "text": "1 min",
+                            "value": 15
+                        },
+                        "end_location": {
+                            "lat": 43.7738415,
+                            "lng": -79.50129129999999
+                        },
+                        "html_instructions": "Head <b>south</b>",
+                        "polyline": {
+                            "points": "qrdjGprfdN`@O"
+                        },
+                        "start_location": {
+                            "lat": 43.7740056,
+                            "lng": -79.50136549999999
+                        },
+                        "travel_mode": "WALKING"
+                    },
+                    {
+                        "distance": {
+                            "text": "87 m",
+                            "value": 87
+                        },
+                        "duration": {
+                            "text": "1 min",
+                            "value": 71
+                        },
+                        "end_location": {
+                            "lat": 43.7736147,
+                            "lng": -79.5023186
+                        },
+                        "html_instructions": "Turn <b>right</b>",
+                        "maneuver": "turn-right",
+                        "polyline": {
+                            "points": "oqdjG`rfdNBHBHb@zC@J?H?F"
+                        },
+                        "start_location": {
+                            "lat": 43.7738415,
+                            "lng": -79.50129129999999
+                        },
+                        "travel_mode": "WALKING"
+                    },
+                    {
+                        "distance": {
+                            "text": "0.1 km",
+                            "value": 143
+                        },
+                        "duration": {
+                            "text": "2 mins",
+                            "value": 118
+                        },
+                        "end_location": {
+                            "lat": 43.7748424,
+                            "lng": -79.50284789999999
+                        },
+                        "html_instructions": "Turn <b>right</b>",
+                        "maneuver": "turn-right",
+                        "polyline": {
+                            "points": "apdjGnxfdNYHMBGBC@uAb@QFYHi@RUJ"
+                        },
+                        "start_location": {
+                            "lat": 43.7736147,
+                            "lng": -79.5023186
+                        },
+                        "travel_mode": "WALKING"
+                    },
+                    {
+                        "distance": {
+                            "text": "73 m",
+                            "value": 73
+                        },
+                        "duration": {
+                            "text": "1 min",
+                            "value": 58
+                        },
+                        "end_location": {
+                            "lat": 43.7746718,
+                            "lng": -79.50372449999999
+                        },
+                        "html_instructions": "Turn <b>left</b>",
+                        "maneuver": "turn-left",
+                        "polyline": {
+                            "points": "wwdjGx{fdNTfBB^Fd@"
+                        },
+                        "start_location": {
+                            "lat": 43.7748424,
+                            "lng": -79.50284789999999
+                        },
+                        "travel_mode": "WALKING"
+                    },
+                    {
+                        "distance": {
+                            "text": "13 m",
+                            "value": 13
+                        },
+                        "duration": {
+                            "text": "1 min",
+                            "value": 10
+                        },
+                        "end_location": {
+                            "lat": 43.7747817,
+                            "lng": -79.5037682
+                        },
+                        "html_instructions": "Turn <b>right</b>",
+                        "maneuver": "turn-right",
+                        "polyline": {
+                            "points": "uvdjGfagdNUH"
+                        },
+                        "start_location": {
+                            "lat": 43.7746718,
+                            "lng": -79.50372449999999
+                        },
+                        "travel_mode": "WALKING"
+                    },
+                    {
+                        "distance": {
+                            "text": "14 m",
+                            "value": 14
+                        },
+                        "duration": {
+                            "text": "1 min",
+                            "value": 11
+                        },
+                        "end_location": {
+                            "lat": 43.7747926,
+                            "lng": -79.503939
+                        },
+                        "html_instructions": "Turn <b>left</b>",
+                        "maneuver": "turn-left",
+                        "polyline": {
+                            "points": "kwdjGpagdNA`@"
+                        },
+                        "start_location": {
+                            "lat": 43.7747817,
+                            "lng": -79.5037682
+                        },
+                        "travel_mode": "WALKING"
+                    },
+                    {
+                        "distance": {
+                            "text": "0.2 km",
+                            "value": 248
+                        },
+                        "duration": {
+                            "text": "3 mins",
+                            "value": 200
+                        },
+                        "end_location": {
+                            "lat": 43.7740123,
+                            "lng": -79.5067153
+                        },
+                        "html_instructions": "Turn <b>left</b>",
+                        "maneuver": "turn-left",
+                        "polyline": {
+                            "points": "mwdjGrbgdNHBBFBNF@F?b@rCFp@?B^~Bl@bEg@NQNO\\KH{CbAyAh@[VAEY@@NOCk@PKJ[p@QA@BFNI@A?"
+                        },
+                        "start_location": {
+                            "lat": 43.7747926,
+                            "lng": -79.503939
+                        },
+                        "travel_mode": "WALKING"
+                    },
+                    {
+                        "distance": {
+                            "text": "0.3 km",
+                            "value": 309
+                        },
+                        "duration": {
+                            "text": "4 mins",
+                            "value": 250
+                        },
+                        "end_location": {
+                            "lat": 43.776485,
+                            "lng": -79.5082843
+                        },
+                        "html_instructions": "Turn <b>right</b>",
+                        "maneuver": "turn-right",
+                        "polyline": {
+                            "points": "qrdjG~sgdN[HKDGBIJGNGLEDEBGBsC~@qAb@GDOLKHA@?GE?S@BNA?C?CACAC?IDa@JEDEDGLGLIPABQA@BFN"
+                        },
+                        "start_location": {
+                            "lat": 43.7740123,
+                            "lng": -79.5067153
+                        },
+                        "travel_mode": "WALKING"
+                    },
+                    {
+                        "distance": {
+                            "text": "9 m",
+                            "value": 9
+                        },
+                        "duration": {
+                            "text": "1 min",
+                            "value": 9
+                        },
+                        "end_location": {
+                            "lat": 43.7765442,
+                            "lng": -79.5082935
+                        },
+                        "html_instructions": "Turn <b>right</b> onto <b>Howard Moscoe Wy</b><div style=\"font-size:0.9em\">Destination will be on the right</div>",
+                        "maneuver": "turn-right",
+                        "polyline": {
+                            "points": "_bejGv}gdNI@A?"
+                        },
+                        "start_location": {
+                            "lat": 43.776485,
+                            "lng": -79.5082843
+                        },
+                        "travel_mode": "WALKING"
+                    }
+                ],
+                "traffic_speed_entry": [],
+                "via_waypoint": []
+            }
+        ],
+        "overview_polyline": {
+            "points": "qrdjGprfdN`@OBHf@dD@T?FYHMBKDkDhAUJTfBJdAUHA`@HBBFBNF@F?b@rCFp@?B^~Bl@bEg@NQNO\\KH{CbAyAh@[VAEY@@NOCk@PKJ[p@QA@BFNI@A?"
+        },
+        "summary": "Howard Moscoe Wy",
+        "warnings": [
+            "Walking directions are in beta. Use caution – This route may be missing sidewalks or pedestrian paths."
+        ],
+        "waypoint_order": []
+    }
+]

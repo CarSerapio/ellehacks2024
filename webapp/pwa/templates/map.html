@@ -1,0 +1,95 @@
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <title>Map</title>
+    <style>
+        #instructions {
+            position: absolute;
+            margin: 20px;
+            width: 25%;
+            top: 0;
+            bottom: 20%;
+            padding: 20px;
+            background-color: #fff;
+            overflow-y: scroll;
+            font-family: sans-serif;
+        }
+    </style>
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v3.1.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v3.1.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='map'></div>
+    <div id="instructions">
+        <p><strong>Trip duration: {{ duration }} minutes</strong></p>
+        <ol> 
+            {% for step in instructions %}
+                <li>{{ step }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoiY2Fyc2VyYXBpbyIsImEiOiJjbHNxN3gxYW0wencwMmtudWVuaHRyNzd0In0.L93INx0g6_KeLX7je-rv9g';
+      const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v12',
+        center: {{ center_coords }}, // starting position, in (long, lang)
+        zoom: 15
+      });
+
+      map.on('load', () => {
+        map.addSource('route', {
+        'type': 'geojson',
+        'data': {
+          'type': 'Feature',
+          'properties': {},
+          'geometry': {
+            'type': 'LineString',
+            'coordinates': {{ coordinates }}
+            }
+        }
+      });
+      
+      map.addLayer({
+
+        'id': 'route',
+        'type': 'line',
+        'source': 'route',
+        'layout': {
+          'line-join': 'round',
+          'line-cap': 'round'
+        },
+        'paint': {
+          'line-color': '#107AB0',
+          'line-width': 8
+        }
+      });
+
+      // Create the arrival and default markers 
+      const marker1 = new mapboxgl.Marker() 
+        .setLngLat({{ start }})
+        .addTo(map); 
+
+      const marker2 = new mapboxgl.Marker() 
+        .setLngLat({{ end }})
+        .addTo(map); 
+
+
+    });
+    </script>
+  </body>
+</html>

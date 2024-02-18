@@ -1,0 +1,204 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> SnowAngels Transport</title>
+    <link rel = "stylesheet" href="{% static 'css/senior-style.css' %}">
+    <link rel = "stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <!--  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
+    </head>
+
+
+<body class="bs-primary">
+<!-- Navigation bar -->
+<section id="navbar">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+      <!--  <button class="navbar-brand" type="button" href="#">Snow Angels Transport</button> -->
+        <button type="button" class="btn btn-primary" onclick="redirectToLogin('volunteer')">Snow Angels Transport</button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#request">Request Ride</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#pickups">Scheduled Pickups</a> <!-- Left to implement !-->
+            </li>
+    
+            </ul>
+        </div>
+        </div>
+    </nav>
+</section>
+
+<!--banner-->
+<section id="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <h2 class="title text-center">Welcome to Your Free Transport Service! </h2>
+                <h3 class="text-center">We are proud to provide trained 
+                    volunteers to accompany you and keep you safe on your required tasks.
+                </h3>
+            </div>
+        </div>
+    </div>
+    <img src="{% static 'images/wave1.png' %}" class="bottom-img">
+</section>
+
+<!-- profile information form -->
+<section id="home">
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title">Profile</h1>
+                <div class="card-text">
+                    <form>
+                        <div class="info">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control form-control-lg" id="name" placeholder="Please input name">
+                        </div>
+                        <div class="info">
+                            <label for="age" class="form-label">Age</label>
+                            <input type="number" class="form-control form-control-lg" id="age" placeholder="Please input age">
+                         </div>
+                         <div class="info">
+                            <label for="health" class="form-label">Medical Conditions</label>
+                            <input type="text" class="form-control form-control-lg" id="health" placeholder="Please list any current medical conditions">
+                         </div>
+
+                    </form>
+
+                </div>               
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- transport requests -->
+<section id="request">
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+            <h2 class="card-title">Request Transport</h2>
+            <h3 class="card-text">Fill out the information required.</h3>
+
+            <!-- Name -->
+            <form>
+                <label for="text" class="form-label"></label>
+                <div class="input-group">
+                    <div class="input-group-text">Name:</div>
+                    <input type="text" id="name" placeholder="Input name here" class="form-control form-control-lg"/>
+                </div>
+            </form>
+
+            <!-- Date Input-->
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" >Date</label> 
+                  <div class="col-md-4 dateContainer">
+                  <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input type="date" id="start" name="trip-start" value="2024-02-18" min="2024-02-18" max="2024-03-17" class="form-control-lg" />
+                  </div>
+                </div>
+              </div>
+            
+              
+        
+              <!-- Time input-->
+            
+            <div class="form-group">
+                <label class="col-md-4 control-label" >Time</label> 
+                  <div class="col-md-4 timeContainer">
+                  <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input type="time" id="appt" name="appt" min="09:00" max="20:00" class="form-control-lg" />
+                  </div>
+                </div>
+              </div>
+            
+            <!-- Text input-->
+                   
+        
+            <form>
+                <label for="text" class="form-label"></label>
+                <div class="input-group">
+                    <div class="input-group-text">Phone Number:</div>
+                    <input type="number" id="phone" placeholder="Input phone number here" class="form-control form-control-lg"/>
+                </div>
+            </form>
+            <!-- Text input-->
+                  
+
+            <form>
+                <label for="text" class="form-label"></label>
+                <div class="input-group">
+                    <div class="input-group-text">Address:</div>
+                    <input type="text" id="address" placeholder="Input address here" class="form-control form-control-lg"/>
+                </div>
+            </form>
+            
+            
+            <!-- Text input-->
+            
+            <form>
+                <label for="text" class="form-label"></label>
+                <div class="input-group">
+                    <div class="input-group-text">City:</div>
+                    <input type="text" id="city" placeholder="Input city here" class="form-control form-control-lg"/>
+                </div>
+            </form>
+        
+            <!-- Text input-->
+            
+            <form>
+                <label for="text" class="form-label"></label>
+                <div class="input-group">
+                    <div class="input-group-text">Zipcode:</div>
+                    <input type="text" id="zipcode" placeholder="Input zipcode here" class="form-control form-control-lg"/>
+                </div>
+            </form>
+
+            <!-- Select Basic -->
+            <div class="container">
+            <form>
+                <select class="form-label form-control-lg " aria-label="Choose a province">
+                    <option selected>Click here to choose a province</option>
+                    <option>Alberta</option>
+                    <option>British Columbia</option>
+                    <option >Manitoba</option>
+                    <option >New Brunswick</option>
+                    <option >Newfoundland and Labrador</option>
+                    <option >Northwest Territories</option>
+                    <option >Nova Scotia</option>
+                    <option >Nunavut</option>
+                    <option >Ontario</option>
+                    <option >Prince Edward Island</option>
+                    <option >Quebec</option>
+                    <option> Saskatchewan</option>
+                    <option >Yukon</option>
+                </select>
+            </form>
+            </div>
+            
+            
+            
+
+            </div>
+        </div>
+        </div>
+</section>
+
+</body>
+</html>
