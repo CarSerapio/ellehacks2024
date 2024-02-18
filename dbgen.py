@@ -102,3 +102,12 @@ for _ in range(15):
 # Count the amount of documents in a collection 
 #post_count = collection.count_documents({})
 #print(post_count)
+
+pipeline = [ 
+    {"$sample": {"size": 4}}
+]
+
+random_records = collection1.aggregate(pipeline)
+
+for record in random_records: 
+    print(record)
